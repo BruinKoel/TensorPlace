@@ -9,6 +9,9 @@ __pycache__/
 # Distribution / packaging
 .Python
 
+*.whl
+*.wav
+
 *.pt
 *.pth
 DATA/
