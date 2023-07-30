@@ -28,7 +28,7 @@ class AudioHost:
                  input_size = 128,
                  hidden_size = 64,
                  num_layers = 4,
-                 dropout=0.1):
+                 dropout=0.01):
 
         #self.model_path = model_path
         #self.device = torch_directml.device()
@@ -37,7 +37,7 @@ class AudioHost:
         self.hidden_size = hidden_size
         self.num_layers = num_layers
         self.dropout = dropout
-        self.dropoutlayer1 = torch.nn.Dropout(0.001)
+
 
         self.load_model(model_path)
 
@@ -185,7 +185,7 @@ class AudioHost:
         data_item = dataset[i].to(self.device)
         mse = torch.nn.MSELoss().to(self.device)
 
-        #data_item = self.dropoutlayer1(data_item)
+
 
 
         item_time = time.time()
