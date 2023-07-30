@@ -14,6 +14,8 @@ __pycache__/
 DATA/
 INFERENCEOUT/
 
+.idea/
+
 
 build/
 develop-eggs/
