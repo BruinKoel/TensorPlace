@@ -31,6 +31,8 @@ class WavSet(Dataset):
         self.stereo = stereo
         self.noisebuffer = torch.zeros((1,1,1))
         self.cache_dir = Cache_Dir_Default + str(self.samplerate)
+        if not os.path.exists(self.cache_dir):
+            os.makedirs(self.cache_dir, exist_ok=True)
 
         # must be last, LOAD_FILES()!!!
         self.Load_Files()

@@ -41,7 +41,7 @@ class AudioHost:
 
         self.load_model(model_path)
 
-        self.optimizer = torch.optim.Adamax(self.model.parameters(), lr=0.06)
+        self.optimizer = torch.optim.Adamax(self.model.parameters(), lr=0.006)
         self.scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(self.optimizer, patience=20, factor=0.60, verbose=True)
         print(self.optimizer)
         self.dataset  = dataset

@@ -16,5 +16,7 @@ def guided_inference(model,initial_input,length,input_sample_rate,output_file = 
     if output_file == "":
         output_file = datetime.now().strftime("%Y-%m-%d-%H-%M-%S") + "Inference.wav"
         output_file = os.path.join("INFERENCEOUT",output_file)
+        if not os.path.exists("INFERENCEOUT"):
+            os.mkdir("INFERENCEOUT")
     torchaudio.save(output_file,waveform,44100)
     model.train()
