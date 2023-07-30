@@ -12,4 +12,4 @@ hurdles:
 - Shoutout to GREG @ https://www.youtube.com/@greggggg for being a papa to my model.
 
   notes:
-  - DELETE THE OLD CACHE IF YOU CHANGE INPUT SIZE FOR THE NETWORK. the dataset gets cached automagically because resampling takes a long time even with the fast resampler. the cached data is in an almost final form so you would have to reshape it to use a different notwork shape. the chache is save by samplerate, so changing that is also a good option then you can keep both networks and both sets in different rates without issue.
+  - DELETE THE OLD CACHE IF YOU CHANGE INPUT SIZE FOR THE NETWORK. the dataset gets cached automagically because resampling takes a long time even with the fast resampler. the cached data is in an almost final form so you would have to reshape it to use a different network shape. the cache is saved by samplerate, so changing that is also a good option then you can keep both networks and both sets in different rates without issue.
