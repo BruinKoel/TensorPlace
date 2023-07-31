@@ -13,3 +13,4 @@ hurdles:
 
   notes:
   - DELETE THE OLD CACHE IF YOU CHANGE INPUT SIZE FOR THE NETWORK. the dataset gets cached automagically because resampling takes a long time even with the fast resampler. the cached data is in an almost final form so you would have to reshape it to use a different network shape. the cache is saved by samplerate, so changing that is also a good option then you can keep both networks and both sets in different rates without issue.
+  - yes the ui does not respond while training, it used to but after many changes and troubles trying to optimise gpu usage i removed it, less race conditions to worry about. feeling cute might fix later. standard out is the way anyway, just felt like making buttons to seperate the functions.
